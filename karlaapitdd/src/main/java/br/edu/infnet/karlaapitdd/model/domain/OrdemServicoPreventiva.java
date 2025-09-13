@@ -22,8 +22,7 @@ public class OrdemServicoPreventiva {
     }
 
     public String getNumeroOS() {
-        throw new UnsupportedOperationException
-                ("Método getNumeroOS não está implementado.");
+        return numeroOS;
     }
 
     public void setNumeroOS(String numeroOS) {
@@ -31,8 +30,7 @@ public class OrdemServicoPreventiva {
     }
 
     public LocalDate getDataCriacao() {
-        throw new UnsupportedOperationException
-                ("Método getDataCriacao não está implementado.");
+        return dataCriacao;
     }
 
     public void setDataCriacao(LocalDate dataCriacao) {
@@ -40,8 +38,7 @@ public class OrdemServicoPreventiva {
     }
 
     public List<ServicoPreventiva> getServicoPreventiva() {
-        throw new UnsupportedOperationException
-                ("Método getServicoPreventiva não está implementado.");
+        return servicoPreventiva;
     }
 
     public void setServicoPreventiva(List<ServicoPreventiva> servicoPreventiva) {
@@ -49,8 +46,7 @@ public class OrdemServicoPreventiva {
     }
 
     public StatusOSManutencaoPreventiva getStatusOSManutencaoPreventiva() {
-        throw new UnsupportedOperationException
-                ("Método getStatusOSManutencaoPreventiva não está implementado.");
+        return statusOSManutencaoPreventiva;
     }
 
     public void setStatusOSManutencaoPreventiva(StatusOSManutencaoPreventiva statusOSManutencaoPreventiva) {
@@ -58,12 +54,10 @@ public class OrdemServicoPreventiva {
     }
 
     public String getTecnico() {
-        throw new UnsupportedOperationException
-                ("Método getTecnico não está implementado.");
+        return tecnico;
     }
 
     public void setTecnico(String tecnico) {
         this.tecnico = tecnico;
     }
-
 }

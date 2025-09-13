@@ -43,8 +43,21 @@ public class ServicoPreventiva {
     }
 
     public BigDecimal calcularCusto() {
-        throw new UnsupportedOperationException
-                ("Método calcularCusto não está implementado.");
+
+        if(quantidade <= 0) {
+            return BigDecimal.ZERO;
+        }
+
+        if(ativo == null) {
+            return BigDecimal.ZERO;
+        }
+
+        if(tipoServico == null) {
+            return BigDecimal.ZERO;
+        }
+
+        BigDecimal custoUnitario = TabelaCustoPreventiva.getCustoUnitario(ativo.getTipoAtivo(), tipoServico);
+        return custoUnitario.multiply(BigDecimal.valueOf(quantidade));
     }
 
 }

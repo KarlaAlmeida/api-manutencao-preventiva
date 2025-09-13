@@ -60,8 +60,12 @@ public class OrdemServicoPreventivaTest {
     }
 
     private boolean isValidUUID(String uuid) {
-        throw new UnsupportedOperationException
-                ("Método isValidUUID não está implementado.");
+        try {
+            UUID.fromString(uuid);
+            return true;
+        } catch (IllegalArgumentException e) {
+            return false;
+        }
     }
 
     @Test

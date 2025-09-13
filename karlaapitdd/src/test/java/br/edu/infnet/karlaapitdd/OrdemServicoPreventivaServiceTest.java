@@ -1,10 +1,5 @@
 package br.edu.infnet.karlaapitdd;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import br.edu.infnet.karlaapitdd.model.domain.*;
 import br.edu.infnet.karlaapitdd.model.service.OrdemServicoPreventivaService;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,7 +11,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 class OrdemServicoPreventivaServiceTest {
 

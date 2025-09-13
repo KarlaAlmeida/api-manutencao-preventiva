@@ -74,7 +74,7 @@ public class ServicoPreventivaTest {
         LocalDate dataInstalacao = LocalDate.of(2025, 9, 8);
         String endereco = "Rua Pantanal 150, Apto 702 Orquidea, Nova Parnamrim, Parnamirim, RN, CEP: 59150-105";
         int quantidade = 1;
-        TipoServicoPreventiva tipoServicoPreventiva = TipoServicoPreventiva.LIMPEZA;
+        TipoServicoPreventiva tipoServicoPreventiva = TipoServicoPreventiva.INSPECAO_VISUAL;
 
         ativo = new Ativo(codigo, tipoAtivo, statusAtivo, dataInstalacao, endereco);
 
@@ -83,7 +83,7 @@ public class ServicoPreventivaTest {
         servicoPreventiva.setQuantidade(quantidade);
         servicoPreventiva.setTipoServico(tipoServicoPreventiva);
 
-        BigDecimal custoEsperado = new BigDecimal(15.0);
+        BigDecimal custoEsperado = new BigDecimal(10.0);
 
         // Quando: chamar o método calcularCusto
         BigDecimal custoCalculado = servicoPreventiva.calcularCusto();
@@ -163,23 +163,21 @@ public class ServicoPreventivaTest {
     }
 
     @Test
-    @DisplayName("Deve retornar zero quando o custo do serviço por ativo estiver nulo.")
-    void deveRetornarZero_quandoCustoServicoNulo() {
+    @DisplayName("Deve retornar zero quando o tipo de serviço estiver nulo.")
+    void deveRetornarZero_quandoTipoServicoNulo() {
         // Dado: um serviço com ativo, quantidade e tipo de serviço válidos
         String codigo = "1";
         TipoAtivo tipoAtivo = TipoAtivo.POSTE;
         StatusAtivo statusAtivo = StatusAtivo.ATIVO;
         LocalDate dataInstalacao = LocalDate.of(2025, 9, 8);
         String endereco = "Rua Pantanal 150, Apto 702 Orquidea, Nova Parnamrim, Parnamirim, RN, CEP: 59150-105";
-        BigDecimal custoServicoPreventiva = null;
-
-        int quantidade = 1;
-        String descricaoServico = "inspeção visual";
 
         ativo = new Ativo(codigo, tipoAtivo, statusAtivo, dataInstalacao, endereco);
 
         ServicoPreventiva servicoPreventiva = new ServicoPreventiva();
         servicoPreventiva.setAtivo(ativo);
+        servicoPreventiva.setQuantidade(1);
+        TipoServicoPreventiva tipoServicoPreventiva = null;
 
         BigDecimal custoEsperado = BigDecimal.ZERO;
 
@@ -188,8 +186,7 @@ public class ServicoPreventivaTest {
 
         // Então: o resultado do custoServico será o valor esperado
         assertEquals(custoEsperado, custoCalculado,
-                "O custo do serviço deve ser zero quando o custo por ativo estiver nulo.");
+                "O custo do serviço deve ser zero quando o tipo de serviço estiver nulo.");
     }
-
 
 }
