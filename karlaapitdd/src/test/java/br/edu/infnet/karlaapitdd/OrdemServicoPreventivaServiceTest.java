@@ -27,6 +27,52 @@ class OrdemServicoPreventivaServiceTest {
                 LocalDate.of(2025,9,12), "Rua Ana Vilar 472");
         ativo2 = new Ativo("T-001", TipoAtivo.TRANSFORMADOR, StatusAtivo.EM_MANUTENCAO,
                 LocalDate.of(2025,5,2),"Rua Ana Vilar 472");
+
+        // Inicialização dos custos dos serviços de preventiva por ativo
+        // POSTE
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.POSTE, TipoServicoPreventiva.INSPECAO_VISUAL, new BigDecimal(10.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.POSTE, TipoServicoPreventiva.LIMPEZA, new BigDecimal(15.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.POSTE, TipoServicoPreventiva.REAPERTO, new BigDecimal(20.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.POSTE, TipoServicoPreventiva.MEDICAO, new BigDecimal(30.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.POSTE, TipoServicoPreventiva.TESTE, new BigDecimal(25.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.POSTE, TipoServicoPreventiva.TROCA_COMPONENTE, new BigDecimal(40.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.POSTE, TipoServicoPreventiva.SUBSTITUICAO, new BigDecimal(50.0));
+
+        // TRANSFORMADOR
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.TRANSFORMADOR, TipoServicoPreventiva.INSPECAO_VISUAL, new BigDecimal(50.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.TRANSFORMADOR, TipoServicoPreventiva.LIMPEZA, new BigDecimal(70.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.TRANSFORMADOR, TipoServicoPreventiva.REAPERTO, new BigDecimal(90.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.TRANSFORMADOR, TipoServicoPreventiva.MEDICAO, new BigDecimal(110.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.TRANSFORMADOR, TipoServicoPreventiva.TESTE, new BigDecimal(120.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.TRANSFORMADOR, TipoServicoPreventiva.TROCA_COMPONENTE, new BigDecimal(200.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.TRANSFORMADOR, TipoServicoPreventiva.SUBSTITUICAO, new BigDecimal(300.0));
+
+        // CHAVE FUSÍVEL
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.CHAVE_FUSIVEL, TipoServicoPreventiva.INSPECAO_VISUAL, new BigDecimal(20.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.CHAVE_FUSIVEL, TipoServicoPreventiva.LIMPEZA, new BigDecimal(25.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.CHAVE_FUSIVEL, TipoServicoPreventiva.REAPERTO, new BigDecimal(35.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.CHAVE_FUSIVEL, TipoServicoPreventiva.MEDICAO, new BigDecimal(45.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.CHAVE_FUSIVEL, TipoServicoPreventiva.TESTE, new BigDecimal(55.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.CHAVE_FUSIVEL, TipoServicoPreventiva.TROCA_COMPONENTE, new BigDecimal(70.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.CHAVE_FUSIVEL, TipoServicoPreventiva.SUBSTITUICAO, new BigDecimal(100.0));
+
+        // PÁRA-RAIOS
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.PARA_RAIOS, TipoServicoPreventiva.INSPECAO_VISUAL, new BigDecimal(15.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.PARA_RAIOS, TipoServicoPreventiva.LIMPEZA, new BigDecimal(20.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.PARA_RAIOS, TipoServicoPreventiva.REAPERTO, new BigDecimal(30.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.PARA_RAIOS, TipoServicoPreventiva.MEDICAO, new BigDecimal(40.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.PARA_RAIOS, TipoServicoPreventiva.TESTE, new BigDecimal(50.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.PARA_RAIOS, TipoServicoPreventiva.TROCA_COMPONENTE, new BigDecimal(60.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.PARA_RAIOS, TipoServicoPreventiva.SUBSTITUICAO, new BigDecimal(80.0));
+
+        // REGULADOR
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.REGULADOR, TipoServicoPreventiva.INSPECAO_VISUAL, new BigDecimal(40.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.REGULADOR, TipoServicoPreventiva.LIMPEZA, new BigDecimal(60.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.REGULADOR, TipoServicoPreventiva.REAPERTO, new BigDecimal(80.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.REGULADOR, TipoServicoPreventiva.MEDICAO, new BigDecimal(100.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.REGULADOR, TipoServicoPreventiva.TESTE, new BigDecimal(130.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.REGULADOR, TipoServicoPreventiva.TROCA_COMPONENTE, new BigDecimal(180.0));
+        TabelaCustoPreventiva.definirCusto(TipoAtivo.REGULADOR, TipoServicoPreventiva.SUBSTITUICAO, new BigDecimal(250.0));
     }
 
     @Test
@@ -50,7 +96,7 @@ class OrdemServicoPreventivaServiceTest {
         BigDecimal custoTotalCalculado = ordemServicoPreventivaService.calcularCustoTotal(ordemServicoPreventiva);
 
         // Então: o custo total deve ser o esperado
-        assertEquals(custoTotalEsperado,custoTotalCalculado,
+        assertTrue(custoTotalEsperado.compareTo(custoTotalCalculado) == 0,
                 "O total do custo da ordem de serviço com um item deve ser 20.00");
     }
 
@@ -65,8 +111,8 @@ class OrdemServicoPreventivaServiceTest {
 
         ServicoPreventiva servicoPreventiva2 = new ServicoPreventiva();
         servicoPreventiva2.setAtivo(ativo2);
-        servicoPreventiva1.setQuantidade(1);
-        servicoPreventiva1.setTipoServico(TipoServicoPreventiva.REAPERTO);// 1 * 90.00 = 90.00
+        servicoPreventiva2.setQuantidade(1);
+        servicoPreventiva2.setTipoServico(TipoServicoPreventiva.REAPERTO);// 1 * 90.00 = 90.00
 
         List<ServicoPreventiva> listaServicos = new ArrayList<>();
         listaServicos.add(servicoPreventiva1);
@@ -81,7 +127,7 @@ class OrdemServicoPreventivaServiceTest {
         BigDecimal custoTotalCalculado = ordemServicoPreventivaService.calcularCustoTotal(ordemServicoPreventiva);
 
         // Então: o custo total deve ser o esperado
-        assertEquals(custoTotalEsperado,custoTotalCalculado,
+        assertTrue(custoTotalEsperado.compareTo(custoTotalCalculado) == 0,
                 "O total do custo da ordem de serviço com vários itens deve ser 110.00");
     }
 

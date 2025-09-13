@@ -18,11 +18,6 @@ public class OrdemServicoPreventivaService {
             return BigDecimal.ZERO;
         }
 
-        /*return ordem.getServicoPreventiva()
-                .stream()
-                .map(ServicoPreventiva::calcularCusto)
-                .reduce(BigDecimal.ZERO, BigDecimal::add);*/
-
         BigDecimal custoTotal = BigDecimal.ZERO;
         for (ServicoPreventiva servico : ordem.getServicoPreventiva()) {
             custoTotal = custoTotal.add(servico.calcularCusto());
