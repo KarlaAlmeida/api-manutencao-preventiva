@@ -3,26 +3,27 @@ package br.edu.infnet.karlaapitdd.model.domain;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class OrdemServicoPreventiva {
 
     private String numeroOS;
-
     private LocalDate dataCriacao;
-
-    private List<ServicoPreventiva> servicoPreventiva = new ArrayList<>();
-
+    private List<ServicoPreventiva> servicoPreventiva;
     private StatusOSManutencaoPreventiva statusOSManutencaoPreventiva;
-
     private String tecnico;
 
     public OrdemServicoPreventiva() {
-        this.dataCriacao = LocalDate.now();
-        this.statusOSManutencaoPreventiva = StatusOSManutencaoPreventiva.ABERTA;
+        this.setNumeroOS(UUID.randomUUID().toString());
+        this.setDataCriacao(LocalDate.now());
+        this.setServicoPreventiva(new ArrayList<ServicoPreventiva>());
+        this.setStatusOSManutencaoPreventiva(StatusOSManutencaoPreventiva.ABERTA);
+        this.setTecnico(null);
     }
 
     public String getNumeroOS() {
-        return numeroOS;
+        throw new UnsupportedOperationException
+                ("Método getNumeroOS não está implementado.");
     }
 
     public void setNumeroOS(String numeroOS) {
@@ -30,7 +31,8 @@ public class OrdemServicoPreventiva {
     }
 
     public LocalDate getDataCriacao() {
-        return dataCriacao;
+        throw new UnsupportedOperationException
+                ("Método getDataCriacao não está implementado.");
     }
 
     public void setDataCriacao(LocalDate dataCriacao) {
@@ -38,7 +40,8 @@ public class OrdemServicoPreventiva {
     }
 
     public List<ServicoPreventiva> getServicoPreventiva() {
-        return servicoPreventiva;
+        throw new UnsupportedOperationException
+                ("Método getServicoPreventiva não está implementado.");
     }
 
     public void setServicoPreventiva(List<ServicoPreventiva> servicoPreventiva) {
@@ -46,7 +49,8 @@ public class OrdemServicoPreventiva {
     }
 
     public StatusOSManutencaoPreventiva getStatusOSManutencaoPreventiva() {
-        return statusOSManutencaoPreventiva;
+        throw new UnsupportedOperationException
+                ("Método getStatusOSManutencaoPreventiva não está implementado.");
     }
 
     public void setStatusOSManutencaoPreventiva(StatusOSManutencaoPreventiva statusOSManutencaoPreventiva) {
@@ -54,10 +58,12 @@ public class OrdemServicoPreventiva {
     }
 
     public String getTecnico() {
-        return tecnico;
+        throw new UnsupportedOperationException
+                ("Método getTecnico não está implementado.");
     }
 
     public void setTecnico(String tecnico) {
         this.tecnico = tecnico;
     }
+
 }

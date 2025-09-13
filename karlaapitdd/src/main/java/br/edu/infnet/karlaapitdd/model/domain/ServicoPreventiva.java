@@ -1,13 +1,22 @@
 package br.edu.infnet.karlaapitdd.model.domain;
 
+
+import java.math.BigDecimal;
+
 public class ServicoPreventiva {
 
     private Ativo ativo;
-
     private int quantidade;
+    private TipoServicoPreventiva tipoServico;
 
-    private String descricaoServico;
+    public ServicoPreventiva(Ativo ativo, int quantidade, TipoServicoPreventiva tipoServico) {
+        this.ativo = ativo;
+        this.quantidade = quantidade;
+        this.tipoServico = tipoServico;
+    }
 
+    public ServicoPreventiva() {
+    }
 
     public Ativo getAtivo() {
         return ativo;
@@ -25,11 +34,17 @@ public class ServicoPreventiva {
         this.quantidade = quantidade;
     }
 
-    public String getDescricaoServico() {
-        return descricaoServico;
+    public TipoServicoPreventiva getTipoServico() {
+        return tipoServico;
     }
 
-    public void setDescricaoServico(String descricaoServico) {
-        this.descricaoServico = descricaoServico;
+    public void setTipoServico(TipoServicoPreventiva tipoServico) {
+        this.tipoServico = tipoServico;
     }
+
+    public BigDecimal calcularCusto() {
+        throw new UnsupportedOperationException
+                ("Método calcularCusto não está implementado.");
+    }
+
 }

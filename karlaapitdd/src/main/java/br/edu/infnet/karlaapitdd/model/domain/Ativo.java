@@ -1,24 +1,23 @@
 package br.edu.infnet.karlaapitdd.model.domain;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class Ativo {
 
     private String codigo;
-
     private TipoAtivo tipoAtivo;
-
     private StatusAtivo statusAtivo;
-
     private LocalDate dataInstalacao;
-
     private String endereco;
 
-    private BigDecimal custoServicoPreventiva;
-
-    private Double duracaoServicoPreventiva;
-
+    public Ativo(String codigo, TipoAtivo tipoAtivo, StatusAtivo statusAtivo,
+                 LocalDate dataInstalacao, String endereco) {
+        this.codigo = codigo;
+        this.tipoAtivo = tipoAtivo;
+        this.statusAtivo = statusAtivo;
+        this.dataInstalacao = dataInstalacao;
+        this.endereco = endereco;
+    }
 
     public String getCodigo() {
         return codigo;
@@ -60,19 +59,5 @@ public class Ativo {
         this.endereco = endereco;
     }
 
-    public BigDecimal getCustoServicoPreventiva() {
-        return custoServicoPreventiva;
-    }
 
-    public void setCustoServicoPreventiva(BigDecimal custoServicoPreventiva) {
-        this.custoServicoPreventiva = custoServicoPreventiva;
-    }
-
-    public Double getDuracaoServicoPreventiva() {
-        return duracaoServicoPreventiva;
-    }
-
-    public void setDuracaoServicoPreventiva(Double duracaoServicoPreventiva) {
-        this.duracaoServicoPreventiva = duracaoServicoPreventiva;
-    }
 }
