@@ -12,6 +12,8 @@ public class OrdemServicoPreventiva {
     private List<ServicoPreventiva> servicoPreventiva;
     private StatusOSManutencaoPreventiva statusOSManutencaoPreventiva;
     private String tecnico;
+    private String dataAgendada;
+    private String dataExecucao;
 
     public OrdemServicoPreventiva() {
         this.setNumeroOS(UUID.randomUUID().toString());
@@ -59,5 +61,21 @@ public class OrdemServicoPreventiva {
 
     public void setTecnico(String tecnico) {
         this.tecnico = tecnico;
+    }
+
+    public String getDataAgendada() {
+        return dataAgendada;
+    }
+
+    public void setDataAgendada(String dataAgendada) {
+        this.dataAgendada = dataAgendada;
+    }
+
+    public String getDataExecucao() {
+        return dataExecucao;
+    }
+
+    public void setDataExecucao(String dataExecucao) {
+        this.dataExecucao = dataExecucao;
     }
 }

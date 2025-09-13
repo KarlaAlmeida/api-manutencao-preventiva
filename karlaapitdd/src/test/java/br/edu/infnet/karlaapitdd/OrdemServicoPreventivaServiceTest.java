@@ -22,7 +22,7 @@ class OrdemServicoPreventivaServiceTest {
     @BeforeEach
     void setup(){
         ordemServicoPreventivaService = new OrdemServicoPreventivaService();
-        // Serviços de exemplo para reutilização nos testes
+
         ativo1 = new Ativo("P-001", TipoAtivo.POSTE, StatusAtivo.ATIVO,
                 LocalDate.of(2025,9,12), "Rua Ana Vilar 472");
         ativo2 = new Ativo("T-001", TipoAtivo.TRANSFORMADOR, StatusAtivo.EM_MANUTENCAO,
@@ -77,7 +77,7 @@ class OrdemServicoPreventivaServiceTest {
 
     @Test
     @DisplayName("Deve calcular o custo total para uma ordem de serviço com um único serviço.")
-    void deveCalcularValorTotal_quandoOrdemServicoPreventivaPossuirUmItem() {
+    void deveCalcularCustoTotal_quandoOrdemServicoPreventivaPossuirUmItem() {
         // Dado: uma ordem de serviço com um serviço
         ServicoPreventiva servicoPreventiva = new ServicoPreventiva();
         servicoPreventiva.setAtivo(ativo1);
@@ -102,7 +102,7 @@ class OrdemServicoPreventivaServiceTest {
 
     @Test
     @DisplayName("Deve calcular o custo total para uma ordem de serviço com vários serviços.")
-    void deveCalcularValorTotal_quandoOrdemServicoPreventivaPossuirVariosServicos() {
+    void deveCalcularCustoTotal_quandoOrdemServicoPreventivaPossuirVariosServicos() {
         // Dado: uma ordem de serviço com vários serviços
         ServicoPreventiva servicoPreventiva1 = new ServicoPreventiva();
         servicoPreventiva1.setAtivo(ativo1);
@@ -149,7 +149,7 @@ class OrdemServicoPreventivaServiceTest {
     }
 
     @Test
-    @DisplayName("Deve retornar zero quando quando a lista de serviços for nula.")
+    @DisplayName("Deve retornar zero quando a lista de serviços for nula.")
     void deveRetornarZero_quandoListaServicosNula() {
         // Dado: uma ordem de serviço com lista serviços nula
         OrdemServicoPreventiva ordemServicoPreventiva = new OrdemServicoPreventiva();
@@ -166,7 +166,7 @@ class OrdemServicoPreventivaServiceTest {
     }
 
     @Test
-    @DisplayName("Deve retornar zero a ordem de serviços for nula.")
+    @DisplayName("Deve retornar zero quando a ordem de serviços for nula.")
     void deveRetornarZero_quandoOrdemServicoPreventivaNula() {
         // Dado: uma ordem de serviço nula
         OrdemServicoPreventiva ordemServicoPreventiva = null;
