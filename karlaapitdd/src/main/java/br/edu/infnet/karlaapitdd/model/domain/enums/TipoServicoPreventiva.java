@@ -1,4 +1,4 @@
-package br.edu.infnet.karlaapitdd.model.domain;
+package br.edu.infnet.karlaapitdd.model.domain.enums;
 
 public enum TipoServicoPreventiva {
     INSPECAO_VISUAL,

@@ -1,7 +1,7 @@
 package br.edu.infnet.karlaapitdd.model.service;
 
-import br.edu.infnet.karlaapitdd.model.domain.OrdemServicoPreventiva;
-import br.edu.infnet.karlaapitdd.model.domain.ServicoPreventiva;
+import br.edu.infnet.karlaapitdd.model.domain.entities.OrdemServicoPreventiva;
+import br.edu.infnet.karlaapitdd.model.domain.entities.ServicoPreventiva;
 
 import java.math.BigDecimal;
 import java.util.Objects;
@@ -18,12 +18,11 @@ public class OrdemServicoPreventivaService {
             return BigDecimal.ZERO;
         }
 
-        BigDecimal custoTotal = BigDecimal.ZERO;
-        for (ServicoPreventiva servico : ordem.getServicoPreventiva()) {
-            custoTotal = custoTotal.add(servico.calcularCusto());
-        }
+        return ordem.getServicoPreventiva()
+                .stream()
+                .map(ServicoPreventiva::calcularCusto)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
 
-        return custoTotal;
     }
 
     public boolean validarOrdemServicoPreventiva(OrdemServicoPreventiva ordem) {

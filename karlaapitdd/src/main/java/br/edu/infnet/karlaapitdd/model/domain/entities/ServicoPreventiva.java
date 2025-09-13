@@ -1,5 +1,8 @@
-package br.edu.infnet.karlaapitdd.model.domain;
+package br.edu.infnet.karlaapitdd.model.domain.entities;
 
+
+import br.edu.infnet.karlaapitdd.model.domain.utils.TabelaCustoPreventiva;
+import br.edu.infnet.karlaapitdd.model.domain.enums.TipoServicoPreventiva;
 
 import java.math.BigDecimal;
 

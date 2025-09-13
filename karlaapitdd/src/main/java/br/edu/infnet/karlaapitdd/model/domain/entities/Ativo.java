@@ -1,4 +1,7 @@
-package br.edu.infnet.karlaapitdd.model.domain;
+package br.edu.infnet.karlaapitdd.model.domain.entities;
+
+import br.edu.infnet.karlaapitdd.model.domain.enums.StatusAtivo;
+import br.edu.infnet.karlaapitdd.model.domain.enums.TipoAtivo;
 
 import java.time.LocalDate;
 

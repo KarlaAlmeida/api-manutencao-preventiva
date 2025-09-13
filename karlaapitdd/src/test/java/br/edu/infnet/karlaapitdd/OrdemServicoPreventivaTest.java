@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import br.edu.infnet.karlaapitdd.model.domain.ServicoPreventiva;
+import br.edu.infnet.karlaapitdd.model.domain.entities.ServicoPreventiva;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
@@ -14,8 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import br.edu.infnet.karlaapitdd.model.domain.OrdemServicoPreventiva;
-import br.edu.infnet.karlaapitdd.model.domain.StatusOSManutencaoPreventiva;
+import br.edu.infnet.karlaapitdd.model.domain.entities.OrdemServicoPreventiva;
+import br.edu.infnet.karlaapitdd.model.domain.enums.StatusOSManutencaoPreventiva;
 
 
 public class OrdemServicoPreventivaTest {
