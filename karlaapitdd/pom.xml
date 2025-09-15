@@ -29,10 +29,12 @@
 	<properties>
 		<java.version>21</java.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<version>3.5.3</version>
 		</dependency>
 
 		<dependency>
@@ -53,7 +55,21 @@
 			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<version>5.0.0-M2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.openfeign</groupId>
+			<artifactId>feign-hc5</artifactId>
+			<version>13.6</version>
+		</dependency>
+
 	</dependencies>
+
 
 	<build>
 		<plugins>
