@@ -5,12 +5,16 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Endereco {
     
-    String cep;
-    String logradouro;
-    String complemento;
-    String bairro;
-    String localidade;
-    String uf;
+    private String cep;
+    private String logradouro;
+    private String complemento;
+    private String bairro;
+    private String localidade;
+    private String uf;
+    private int numero;
+    private String complementoNumero;
+    private String latitude;
+    private String longitude;
 
     public String getCep() {
         return cep;
@@ -58,5 +62,37 @@ public class Endereco {
 
     public void setUf(String uf) {
         this.uf = uf;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public String getComplementoNumero() {
+        return complementoNumero;
+    }
+
+    public void setComplementoNumero(String complementoNumero) {
+        this.complementoNumero = complementoNumero;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
     }
 }

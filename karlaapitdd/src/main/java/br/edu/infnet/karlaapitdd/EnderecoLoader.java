@@ -18,7 +18,7 @@ public class EnderecoLoader implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        Endereco endereco = enderecoService.obterEnderecoPorCep("59150015");
+        Endereco endereco = enderecoService.obterEnderecoPorCep("20010020");
 
         System.out.println("[RESULTADO] MEU CEP: " + endereco.getCep());
         System.out.println("[RESULTADO] MEU LOGRADOURO: " + endereco.getLogradouro());
@@ -26,5 +26,7 @@ public class EnderecoLoader implements ApplicationRunner {
         System.out.println("[RESULTADO] MEU BAIRRO: " + endereco.getBairro());
         System.out.println("[RESULTADO] MEU MUNICÍPIO: " + endereco.getLocalidade());
         System.out.println("[RESULTADO] MEU UF: " + endereco.getUf());
+        System.out.println("[RESULTADO] MINHA LATITUDE: " + endereco.getLatitude());
+        System.out.println("[RESULTADO] MINHA LONGITUDE: " + endereco.getLongitude());
     }
 }
