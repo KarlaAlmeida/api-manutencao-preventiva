@@ -2,10 +2,10 @@ package br.edu.infnet.karlaapitdd;
 
 import br.edu.infnet.karlaapitdd.model.domain.entities.Ativo;
 import br.edu.infnet.karlaapitdd.model.domain.entities.ServicoPreventiva;
-import br.edu.infnet.karlaapitdd.model.domain.enums.StatusAtivo;
-import br.edu.infnet.karlaapitdd.model.domain.enums.TipoAtivo;
-import br.edu.infnet.karlaapitdd.model.domain.enums.TipoServicoPreventiva;
-import br.edu.infnet.karlaapitdd.model.domain.utils.TabelaCustoPreventiva;
+import br.edu.infnet.karlaapitdd.model.enums.StatusAtivo;
+import br.edu.infnet.karlaapitdd.model.enums.TipoAtivo;
+import br.edu.infnet.karlaapitdd.model.enums.TipoServicoPreventiva;
+import br.edu.infnet.karlaapitdd.model.utils.TabelaCustoPreventiva;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

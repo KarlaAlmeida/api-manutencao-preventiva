@@ -1,6 +1,6 @@
 package br.edu.infnet.karlaapitdd.model.domain.entities;
 
-import br.edu.infnet.karlaapitdd.model.domain.enums.StatusOSManutencaoPreventiva;
+import br.edu.infnet.karlaapitdd.model.enums.StatusOSManutencaoPreventiva;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

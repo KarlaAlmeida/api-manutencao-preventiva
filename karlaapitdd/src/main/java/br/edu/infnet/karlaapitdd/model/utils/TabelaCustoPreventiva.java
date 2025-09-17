@@ -1,7 +1,7 @@
-package br.edu.infnet.karlaapitdd.model.domain.utils;
+package br.edu.infnet.karlaapitdd.model.utils;
 
-import br.edu.infnet.karlaapitdd.model.domain.enums.TipoAtivo;
-import br.edu.infnet.karlaapitdd.model.domain.enums.TipoServicoPreventiva;
+import br.edu.infnet.karlaapitdd.model.enums.TipoAtivo;
+import br.edu.infnet.karlaapitdd.model.enums.TipoServicoPreventiva;
 
 import java.math.BigDecimal;
 import java.util.EnumMap;
