@@ -1,4 +1,4 @@
-package br.edu.infnet.karlaapitdd.model.domain.clients;
+package br.edu.infnet.karlaapitdd.model.clients;
 
 import br.edu.infnet.karlaapitdd.model.domain.entities.Endereco;
 import org.springframework.cloud.openfeign.FeignClient;

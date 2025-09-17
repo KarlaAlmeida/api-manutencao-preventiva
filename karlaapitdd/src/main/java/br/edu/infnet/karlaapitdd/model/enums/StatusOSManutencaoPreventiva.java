@@ -1,4 +1,4 @@
-package br.edu.infnet.karlaapitdd.model.domain.enums;
+package br.edu.infnet.karlaapitdd.model.enums;
 
 public enum StatusOSManutencaoPreventiva {
     ABERTA,

@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.UUID;
 
 import br.edu.infnet.karlaapitdd.model.domain.entities.OrdemServicoPreventiva;
-import br.edu.infnet.karlaapitdd.model.domain.enums.StatusOSManutencaoPreventiva;
+import br.edu.infnet.karlaapitdd.model.enums.StatusOSManutencaoPreventiva;
 
 
 public class OrdemServicoPreventivaTest {
