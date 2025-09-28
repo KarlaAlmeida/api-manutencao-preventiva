@@ -1,11 +1,13 @@
 # API Obtenção de endereço por CEP e georreferencimento
 
-Funcionalidade desenvolvida em Spring Boot para consumo e orquestração de dados de APIs externas.
-
-## Funcionalidade
+## Visão Geral do Projeto
+Esta funcionalidade foi desenvolvida em Spring Boot para consumo e orquestração de dados de APIs externas.
 
 A API expõe um endpoint para consulta de endereços a partir de um CEP. A implementação consome dados da API [ViaCEP](https.viacep.com.br) para obter os dados do endereço e, em seguida, orquestra uma chamada para a API [OpenStreetMap](https.openstreetmap.org) para obter os dados de geolocalização (latitude e longitude).
 O objetivo desta funcionalidade é habilitar novas funcionalidades no sistema, tais como a identificação da distância dos técnicos, em função das coordenadas geográficas, em relação ao ativo para acionar o que estiver mais próximo da ocorrência.
+
+###
+Este projeto atua como um módulo de endereço georrefenciado que é consumido, por meio do OpenFeign, pelo sistema principal api-gestao-rede-eletrica, no qual os ativos recebem o endereço georreferenciado.
 
 ## Como executar
 
