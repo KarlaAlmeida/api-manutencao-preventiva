@@ -1,24 +1,28 @@
-package br.edu.infnet.karlaapitdd.model.domain;
+package br.edu.infnet.karlaapitdd.model.domain.entities;
+
+import br.edu.infnet.karlaapitdd.model.enums.StatusOSManutencaoPreventiva;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class OrdemServicoPreventiva {
 
     private String numeroOS;
-
     private LocalDate dataCriacao;
-
-    private List<ServicoPreventiva> servicoPreventiva = new ArrayList<>();
-
+    private List<ServicoPreventiva> servicoPreventiva;
     private StatusOSManutencaoPreventiva statusOSManutencaoPreventiva;
-
     private String tecnico;
+    private String dataAgendada;
+    private String dataExecucao;
 
     public OrdemServicoPreventiva() {
-        this.dataCriacao = LocalDate.now();
-        this.statusOSManutencaoPreventiva = StatusOSManutencaoPreventiva.ABERTA;
+        this.setNumeroOS(UUID.randomUUID().toString());
+        this.setDataCriacao(LocalDate.now());
+        this.setServicoPreventiva(new ArrayList<ServicoPreventiva>());
+        this.setStatusOSManutencaoPreventiva(StatusOSManutencaoPreventiva.ABERTA);
+        this.setTecnico(null);
     }
 
     public String getNumeroOS() {
@@ -59,5 +63,21 @@ public class OrdemServicoPreventiva {
 
     public void setTecnico(String tecnico) {
         this.tecnico = tecnico;
+    }
+
+    public String getDataAgendada() {
+        return dataAgendada;
+    }
+
+    public void setDataAgendada(String dataAgendada) {
+        this.dataAgendada = dataAgendada;
+    }
+
+    public String getDataExecucao() {
+        return dataExecucao;
+    }
+
+    public void setDataExecucao(String dataExecucao) {
+        this.dataExecucao = dataExecucao;
     }
 }
